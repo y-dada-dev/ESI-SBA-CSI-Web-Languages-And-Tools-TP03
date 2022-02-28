@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<annuaire xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="pays.xsd">
+    <pays nom="Algérie">
+        <capitale> Alger </capitale>
+        <nbr_population en="2016">40378714</nbr_population>
+    </pays>
+    
+
+    <pays nom="Tunisie">
+        <capitale> tunis </capitale>
+        <nbr_population en="2015">11191854</nbr_population>
+    </pays>
+    
+    <pays nom="Maroc">
+        <capitale> Rabat </capitale>
+        <nbr_population en="2015">34149357</nbr_population>
+    </pays>
+    
+    
+    
+</annuaire>
+

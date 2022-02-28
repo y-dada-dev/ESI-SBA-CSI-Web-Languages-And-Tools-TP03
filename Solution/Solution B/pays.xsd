@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <!--Déclarations des éléments -->
+<xsd:element name="nbr_population">
+        <xsd:complexType>
+            <xsd:simpleContent>
+                <xsd:extension base="xsd:positiveInteger">
+                    <xsd:attribute name="en" type="xsd:gYear" use="required"/>
+                </xsd:extension>
+            </xsd:simpleContent>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="pays">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="capitale" type="xsd:string"/>
+                <xsd:element ref="nbr_population"/>
+            </xsd:sequence>
+            <xsd:attribute name="nom" type="xsd:string" use="required"/>
+        </xsd:complexType>
+    </xsd:element>
+
+    <!--Root-->
+    <xsd:element name="annuaire">
+        <xsd:complexType>
+            <xsd:sequence minOccurs="1" maxOccurs="unbounded">
+                <xsd:element ref="pays"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

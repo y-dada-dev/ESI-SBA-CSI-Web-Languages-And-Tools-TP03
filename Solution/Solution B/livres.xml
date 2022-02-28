@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<livres xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="livres.xsd">
+    <livre edition="livre de poche">
+        <titre>XML Weekend Crash Course (with CD-ROM)</titre>
+        <auteur>
+            <prenom>Kay</prenom>
+            <nom>Ethier</nom>
+            <pays>USA</pays>
+        </auteur>
+        <auteur>
+            <prenom>Alan</prenom>
+            <nom>Houser</nom>
+            <pays>USA</pays>
+        </auteur>
+        <annee>2004</annee>
+        <prix monnaie="USD" valeur="17.49"/>
+    </livre>
+    <livre edition="relie">
+        <titre>Data on the Web: From Relations to Semistructured Data and XML</titre>
+        <auteur>
+            <prenom>Serge</prenom>
+            <nom>Abiteboul</nom>
+            <laboratoire>INRIA</laboratoire>
+            <pays>F</pays>
+        </auteur>
+        <auteur>
+            <prenom>Peter</prenom>
+            <nom>Buneman</nom>
+            <laboratoire>Upenn</laboratoire>
+            <pays>USA</pays>
+        </auteur>
+        <annee>1999</annee>
+        <prix monnaie="EUR" valeur="38.43"/>
+    </livre>
+</livres>

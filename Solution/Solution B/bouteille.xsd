@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  
+  
+  <!-- Déclarations de éléments simples -->
+  <xs:element name="ph" type="T_PH"/> 
+  <xs:element name="marque" type="xs:string"/>
+  <xs:element name="commune" type="xs:string"/>
+  <xs:element name="wilaya" type="xs:string"/>
+  <xs:element name="code_barre" type="Tcodebar"/>  
+  <xs:element name="contenance" type="Tcontenance"></xs:element>
+   
+  <!-- Déclarations de types simples -->
+  
+  <xs:simpleType name="T_PH">
+    <xs:restriction base="xs:decimal">
+      <xs:maxInclusive value="8.5"></xs:maxInclusive>
+      <xs:minInclusive value="6.5"></xs:minInclusive>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Tunit">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Mg/l"></xs:enumeration>
+      <xs:enumeration value="g/l"></xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Tcodebar">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:totalDigits value="14"></xs:totalDigits>
+    </xs:restriction>
+  </xs:simpleType>  
+  <xs:complexType name="Tcontenance">
+    <xs:simpleContent>
+      <xs:extension base="xs:integer">
+        <xs:attribute name="unit" use="required" type="xs:string"/>
+      </xs:extension>
+    </xs:simpleContent>   
+  </xs:complexType>
+  
+  <!-- Déclarations des éléments complexes -->
+  <xs:element name="bouteille">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="marque"/>
+        <xs:element ref="composition"/>
+        <xs:element ref="source"/>
+        <xs:element ref="code_barre"/>
+        <xs:element ref="contenance"/>
+        <xs:element ref="ph"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+ <xs:element name="composition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ion_positif"/>
+        <xs:element ref="ion_negatif"/>
+        <xs:element minOccurs="0" ref="autre"/>
+      </xs:sequence>
+      <xs:attribute name="unit" use="required" type="Tunit"/>
+    </xs:complexType>
+  </xs:element> 
+  <xs:element name="ion_positif">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ion"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element> 
+  <xs:element name="ion_negatif">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ion"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="autre">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="type" use="required" type="xs:string"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="source">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="commune"/>
+        <xs:element ref="wilaya"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ion">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="quantité" use="required" type="xs:decimal"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  
+  <!--Root--> 
+  <xs:element name="bouteilles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="bouteille"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

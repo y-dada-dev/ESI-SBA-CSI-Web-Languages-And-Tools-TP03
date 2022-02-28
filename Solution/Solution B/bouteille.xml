@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bouteilles xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="bouteille.xsd">
+    <bouteille>
+        <marque>Ifri</marque>
+        <composition unit="Mg/l">
+            <ion_positif>
+                <ion quantité="71">calcium </ion>
+                <ion quantité="5.5">magnésium </ion>
+            </ion_positif>
+            <ion_negatif>
+                <ion quantité="20">chlorure </ion>
+                <ion quantité="1">nitrate </ion>
+            </ion_negatif>
+            <autre type="metal">fer</autre>
+        </composition>
+        <source>
+            <commune>Ifri</commune>
+            <wilaya>Bejaia</wilaya>
+        </source>
+        <code_barre>3274080005003</code_barre>
+        <contenance unit="cl">150</contenance>
+        <ph>7.45</ph>
+    </bouteille>
+    <bouteille>
+        <marque> Guedila</marque>
+        <composition unit="Mg/l">
+            
+            <ion_positif>
+                <ion quantité="81">calcium </ion>
+                <ion quantité="4">magnésium </ion>
+            </ion_positif>
+            <ion_negatif>
+                <ion quantité="3.6">chlorure </ion>
+                <ion quantité="2">nitrate </ion>
+            </ion_negatif>
+        </composition>
+        <source>
+            <commune>Djemorah</commune>
+            <wilaya>Biskra</wilaya>
+        </source>
+        <code_barre>3268840001008</code_barre>
+        <contenance unit="cl">50</contenance>
+        <ph>7.5</ph>
+    </bouteille>
+    <bouteille>
+        <marque>Saida</marque>
+        <composition unit="Mg/l" >
+            
+            <ion_positif>
+                <ion quantité="11">calcium </ion>
+                <ion quantité="8">magnésium </ion>
+            </ion_positif>
+            <ion_negatif>
+                <ion quantité="13.5">chlorure </ion>
+                <ion quantité="6.3">nitrate </ion>
+            </ion_negatif>
+          
+        </composition>
+        <source>
+            <commune>Ain-El-Hjar</commune>
+            <wilaya>Saida</wilaya>
+        </source>
+        <code_barre>3057640117008</code_barre>
+        <contenance unit="cl">50</contenance>
+        <ph>7</ph>
+    </bouteille>
+    
+</bouteilles>
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="biblo_part03.xsd">
+ 
+ <article>
+  <titre>XML </titre>
+  <auteur>djamel</auteur>
+  <infosPublication>
+   <pages>1 à 20</pages>
+   <anneePublication> 2000</anneePublication>
+   <numéroJournal>16 </numéroJournal>
+   <email>nom.pre@gmail.dz</email>
+  </infosPublication>
+ </article>
+ <livre ISBN="1234567890">
+  <titre>EJB</titre>
+  <auteur>hamid</auteur>
+  <tomes>
+   <tome nbPages="160"/>
+  </tomes>
+  <infosEdition>
+   <editeur>ACM</editeur>
+   <lieuEdition>Oran</lieuEdition>
+   <lieuImpression>Oran</lieuImpression>
+  </infosEdition>
+ </livre>
+</biblio>

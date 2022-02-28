@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+ 
+  <!-- Déclarations de types simples -->
+  <xs:simpleType name="Tcat">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="rue"></xs:enumeration>
+      <xs:enumeration value="allée"></xs:enumeration>
+      <xs:enumeration value="avenue"></xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Tnote">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:maxInclusive value="20"></xs:maxInclusive>
+      <xs:minInclusive value="5"></xs:minInclusive>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <!-- Déclarations des éléments de type simple -->
+  <xs:element name="prenom" type="xs:string"/>
+  <xs:element name="nom_F" type="xs:string"/>
+  <xs:element name="numero" type="xs:integer"/>
+  <xs:element name="code" type="xs:integer"/>
+  <xs:element name="ville" type="xs:string"/>
+  <!-- Déclarations des éléments de type complexe -->
+  <xs:element name="classe">
+    <xs:complexType>
+      <xs:sequence maxOccurs="unbounded">
+        <xs:element  ref="eleve"/>
+      </xs:sequence>
+      <xs:attribute name="nom" use="required" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="eleve">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="information_personnelle"/>
+        <xs:element ref="resultats"/>
+      </xs:sequence>
+      <xs:attribute name="ident" use="required" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="information_personnelle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nom"/>
+        <xs:element ref="adresse"/>
+        <xs:element ref="date_naiss"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nom">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="prenom"/>
+        <xs:element ref="nom_F"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="adresse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="numero"/>
+        <xs:element ref="voie"/>
+        <xs:element ref="code"/>
+        <xs:element ref="ville"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="voie">
+    <xs:complexType >
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="cat" use="required" type="Tcat"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="date_naiss">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="annee" type="xs:integer"/>
+        <xs:element name="mois" type="xs:integer"/>
+        <xs:element name="jour" type="xs:integer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="resultats">
+    <xs:complexType>
+      <xs:sequence maxOccurs="3">
+        <xs:element ref="trimestre"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="trimestre">
+    <xs:complexType>
+      <xs:sequence maxOccurs="unbounded">
+        <xs:element  ref="module"/>
+      </xs:sequence>
+      <xs:attribute name="num" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+   <xs:element name="module">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="Tnote">
+          <xs:attribute name="nom" use="required" type="xs:string"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <!--Root--> 
+  <xs:element name="classes">
+    <xs:complexType>
+      <xs:sequence maxOccurs="unbounded">
+        <xs:element ref="classe"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

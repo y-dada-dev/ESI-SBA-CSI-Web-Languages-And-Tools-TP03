@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="classes.xsd">
+<classe nom="Groupe01">
+    
+    <eleve ident="E01">
+        <information_personnelle>
+        <nom>
+            <prenom>Ali</prenom>
+            <nom_F>Benmohamed</nom_F>
+        </nom>
+        <adresse>
+            <numero>7</numero>
+            <voie cat="rue">Abane Ramdan</voie>
+            <code>22012</code>
+            <ville>Sidi Bel Abbes</ville>
+        </adresse>
+        <date_naiss>
+            <annee>1995</annee>
+            <mois>12</mois>
+            <jour>13</jour>
+        </date_naiss>
+        </information_personnelle>
+        <resultats>
+            <trimestre num="1">
+                <module nom="fr"> 12</module>
+                <module nom="hist">14</module>
+                <module nom="math">9</module>
+                <module nom="phys">6</module>
+               <module nom="dessin">14</module>
+            </trimestre>
+            <trimestre num="2">
+                <module nom="fr"> 12</module>
+                <module nom="hist">14</module>
+                <module nom="math">9</module>
+                <module nom="phys">6</module>
+                <module nom="dessin">14</module>
+            </trimestre>
+            <trimestre num="3">
+                <module nom="fr"> 12</module>
+                <module nom="hist">14</module>
+                <module nom="math">9</module>
+                <module nom="phys">6</module>
+                <module nom="dessin">14</module>
+            </trimestre>
+        </resultats>
+    </eleve>
+    <eleve ident="E02">
+        <information_personnelle> 
+        <nom>
+            <prenom>Zohra</prenom>
+            <nom_F>Talbi</nom_F>
+        </nom>
+        <adresse>
+            <numero>16</numero>
+            <voie cat="allée">des Aures</voie>
+            <code>22011</code>
+            <ville>Sidi Bel Abbes</ville>
+        </adresse>
+        
+            <date_naiss>
+            <annee>1996</annee>
+            <mois>02</mois>
+            <jour>27</jour>
+        </date_naiss>
+        </information_personnelle>
+        <resultats>
+            <trimestre num="1">
+                <module nom="fr"> 12</module>
+                <module nom="hist">14</module>
+                <module nom="math">9</module>
+                <module nom="phys">6</module>
+                
+            </trimestre>
+            <trimestre num="2">
+                <module nom="fr"> 12</module>
+                <module nom="hist">14</module>
+                <module nom="math">9</module>
+                <module nom="phys">6</module>
+            </trimestre>
+            <trimestre num="3">
+                <module nom="fr"> 12</module>
+                <module nom="hist">14</module>
+                <module nom="math">9</module>
+                <module nom="phys">6</module>
+            </trimestre>
+        </resultats>
+    </eleve>
+    <eleve ident="E03">
+    <information_personnelle>
+        <nom>
+            <prenom>Omar</prenom>
+            <nom_F>Nasri</nom_F>
+        </nom>
+        <adresse>
+            <numero>12</numero>
+            <voie cat="avenue">de la République</voie>
+            <code>22012</code>
+            <ville>Sidi Bel Abbes</ville>
+        </adresse>
+
+        <date_naiss>
+            <annee>1995</annee>
+            <mois>08</mois>
+            <jour>01</jour>
+        </date_naiss>
+        </information_personnelle>
+        <resultats>
+            <trimestre num="1">
+                <module nom="fr"> 20</module>
+                <module nom="hist">14</module>
+                <module nom="math">9</module>
+                <module nom="phys">6</module>
+            </trimestre>
+            <trimestre num="2">
+                <module nom="fr"> 12</module>
+                <module nom="hist">14</module>
+                <module nom="math">9</module>
+                <module nom="phys">6</module>
+            </trimestre>
+            <trimestre num="3">
+                <module nom="fr"> 12</module>
+                <module nom="hist">14</module>
+                <module nom="math">9</module>
+                <module nom="phys">6</module>
+            </trimestre>
+        </resultats>
+    </eleve>
+</classe>
+</classes>
